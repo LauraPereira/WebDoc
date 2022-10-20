@@ -1,0 +1,554 @@
+@font-face {
+    font-family: "LHF";
+    src: url("../police/LHF_Uncial_Caps.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ArialBold";
+    src: url("../police/arlrdbd.ttf") format("truetype");
+}
+
+#survolTexte {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 360px;
+    left: 250px;
+    z-index: 8;
+}
+
+#cliqueVideo {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 360px;
+    left: 1370px;
+    z-index: 8;
+}
+
+.adversaire {
+    position: absolute;
+    z-index: 20;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    font-family: "LHF";
+    background: rgba(0, 0, 0, 0.5);
+    #texteAdversaire {
+        margin: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: justify;
+        font-size: 8em;
+        text-align: center;
+    }
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+@-ms-viewport {
+    width: 1920px;
+    height: 1080px;
+    orientation: landscape;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.popup {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 50;
+    border: black 15px solid;
+    border-radius: 20px;
+    font-family: "ArialBold";
+    display: flex;
+    top: 15%;
+    left: 13%;
+    width: 70%;
+    height: 70%;
+}
+
+#texte {
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+}
+
+#texteCarte {
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+    font-size: 2em;
+}
+
+.popupTexte {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 50;
+    border: black 15px solid;
+    border-radius: 20px;
+    font-family: "ArialBold";
+    display: flex;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+}
+
+#croix,
+#btnPause {
+    display: none;
+}
+
+#btnPlay,
+#btnPause {
+    z-index: 20;
+    position: absolute;
+    right: 150px;
+    top: 15px;
+}
+
+#croix,
+#pointInt {
+    z-index: 10;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+#barreNav {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 110px;
+    width: 1920px;
+    z-index: 5;
+    overflow: hidden;
+    background: url("../Images/PageAccueil/FlecheCoupe.svg");
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    a:not(:first-child) {
+        margin: auto;
+        margin-top: 60px;
+    }
+}
+
+#PremierAnnee {
+    margin-left: 2%;
+    margin-top: 60px;
+    margin-bottom: auto;
+    margin-right: auto;
+}
+
+.pageAnnee {
+    color: white;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Arial";
+    #texteCliquez {
+        margin-top: -3%;
+        height: 10%;
+        width: 100%;
+        text-align: center;
+        font-size: 8em;
+        animation: grandit 1s ease infinite;
+    }
+}
+
+.anneeNav:hover {
+    transform: translateY(-45px);
+    filter: drop-shadow(0 0 0.75em orange);
+}
+
+.ouverturePopup {
+    animation: ouverturePopup 0.5s ease forwards;
+}
+
+.fermeturePopup {
+    animation: fermeturePopup 0.5s ease forwards;
+}
+
+@keyframes ouverturePopup {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fermeturePopup {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.hover {
+    transform: translateY(-20%) !important;
+    filter: drop-shadow(0 0 2em white);
+}
+
+#video {
+    position: absolute;
+    height: 750px;
+    width: 1650px;
+    z-index: 30;
+    top: 155px;
+    left: 135px;
+}
+
+.popupVideo {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 25;
+}
+
+
+/*******************Acccueil***********************/
+
+#contentAccueil {
+    background: url("../Images/PageAccueil/FondAccueil.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pageAccueil {
+    font-family: "LHF";
+    font-size: 2em;
+    color: white;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    #bodyAccueil {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 1920px;
+        display: flex;
+        flex-direction: column;
+        height: 1080px;
+        background-color: black;
+        #titreAccueil {
+            background: url("../Images/PageAccueil/Hearthstone.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 130px;
+            display: flex;
+            flex-direction: row;
+            h1 {
+                position: absolute;
+                left: 650px;
+                top: 80px;
+            }
+        }
+        #containHaut {
+            background: url("../Images/PageAccueil/Fleche.svg");
+            background-position: bottom;
+            background-repeat: no-repeat;
+            justify-content: space-around;
+            padding-bottom: 4.5%;
+            height: 540px;
+            a {
+                position: absolute;
+                top: 415px;
+            }
+            #rond2014 {
+                left: 220px;
+            }
+            #rond2016 {
+                left: 890px;
+            }
+            #rond2018 {
+                right: 200px;
+            }
+
+        }
+        #containBas {
+            margin-bottom: auto;
+            margin-top: -3%;
+            height: 470px;
+            #img2015 {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #img2017 {
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+.contain {
+    display: flex;
+    flex-direction: row;
+}
+
+.annee:hover {
+    filter: drop-shadow(0 0 0.75em orange);
+    animation: grandit 1s ease infinite;
+}
+
+.img:hover {
+    animation: grandit 1s ease infinite;
+}
+
+@keyframes grandit {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*********************année******************/
+
+.content2018 {
+    background: url("../Images/2018/Fond2018.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content2017 {
+    background: url("../Images/2017/Fond2017.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content2016 {
+    background: url("../Images/2016/Fond2016.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content2014 {
+    background: url("../Images/2014/Fond2014.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content2015 {
+    background: url("../Images/2015/Fond2015.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#page2014,
+#page2015,
+#page2016,
+#page2017,
+#page2018 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    #body2014 {
+        margin: 0;
+        padding: 0;
+        width: 1920px;
+        display: flex;
+        flex-direction: column;
+        height: 1080px;
+        overflow: hidden;
+        background-color: black;
+        .popup {
+            font-size: 2em;
+        }
+        #ensemble {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            height: 1080px;
+            width: 1920px;
+            #carteHaut {
+                margin: 0 auto;
+                height: 500px;
+                width: 1920px;
+                top: 0;
+                z-index: 3;
+            }
+            #carteBas {
+                margin: 0 auto;
+                height: 45%;
+                bottom: 0;
+                z-index: 3;
+            }
+            .cartes {
+                display: flex;
+                flex-direction: row;
+                img {
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+#titreAnnee2018 {
+    background: url("../Images/2018/2018.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 130px;
+    width: 1920px;
+    display: flex;
+    flex-direction: row;
+    z-index: 4;
+    position: absolute;
+    img {
+        margin-left: auto;
+    }
+}
+
+#titreAnnee2017 {
+    background: url("../Images/2017/2017.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 130px;
+    width: 1920px;
+    display: flex;
+    flex-direction: row;
+    z-index: 4;
+    position: absolute;
+    img {
+        margin-left: auto;
+    }
+}
+
+#titreAnnee2016 {
+    background: url("../Images/2016/2016.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 130px;
+    width: 1920px;
+    display: flex;
+    flex-direction: row;
+    z-index: 4;
+    position: absolute;
+    img {
+        margin-left: auto;
+    }
+
+}
+
+#titreAnnee2015 {
+    background: url("../Images/2015/2015.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 130px;
+    width: 1920px;
+    display: flex;
+    flex-direction: row;
+    z-index: 4;
+    position: absolute;
+    img {
+        margin-left: auto;
+    }
+}
+
+#titreAnnee {
+    background: url("../Images/2014/2014.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 130px;
+    width: 1920px;
+    display: flex;
+    flex-direction: row;
+    z-index: 4;
+    position: absolute;
+    img {
+        margin-left: auto;
+    }
+}
+
+#getg {
+    transform: rotate(-15deg);
+    bottom: -190px;
+    left: 720px;
+    z-index: 3;
+}
+
+#nax {
+    transform: rotate(15deg);
+    bottom: -190px;
+    right: 750px;
+}
+
+#montRoche,
+#dta,
+#ungoro, #bm {
+    transform: rotate(-25deg);
+    bottom: -220px;
+    left: 700px;
+}
+
+#gdTournois,
+#kara,
+#tdg, #arma {
+    bottom: -190px;
+    left: 820px;
+}
+
+#ligueExplo,
+#gad,
+#kc, #raz {
+    transform: rotate(25deg);
+    bottom: -220px;
+    left: 950px;
+}
+
+#dosCarte1 {
+    transform: rotate(-15deg);
+    top: -200px;
+    left: 900px;
+    z-index: 1;
+}
+
+#dosCarte2 {
+    transform: rotate(15deg);
+    top: -200px;
+    left: 750px;
+    z-index: 1;
+}
+
+#dosCarte13 {
+    transform: rotate(25deg);
+    top: -220px;
+    left: 700px;
+}
+
+#dosCarte23 {
+    top: -200px;
+    left: 820px;
+}
+
+#dosCarte33 {
+    top: -220px;
+    left: 950px;
+    transform: rotate(-25deg);
+}
