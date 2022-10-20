@@ -1,0 +1,687 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "LHF";
+  src: url("../police/LHF_Uncial_Caps.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ArialBold";
+  src: url("../police/arlrdbd.ttf") format("truetype");
+}
+
+#survolCarteDos {
+    top: 560px;
+    left: 1370px;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    z-index: 8;
+}
+
+/* line 11, F:/MMI2/S4/WebDoc/scss/style.scss */
+#survolTexte {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  top: 360px;
+  left: 250px;
+  z-index: 8;
+}
+
+/* line 20, F:/MMI2/S4/WebDoc/scss/style.scss */
+#cliqueVideo {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 360px;
+  left: 1370px;
+  z-index: 8;
+}
+
+/* line 29, F:/MMI2/S4/WebDoc/scss/style.scss */
+.adversaire {
+  position: absolute;
+  z-index: 20;
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  font-family: "LHF";
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 37, F:/MMI2/S4/WebDoc/scss/style.scss */
+.adversaire #texteAdversaire {
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: justify;
+  font-size: 8em;
+  text-align: center;
+}
+
+/* line 47, F:/MMI2/S4/WebDoc/scss/style.scss */
+.content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+@-ms-viewport {
+  width: 1920px;
+  height: 1080px;
+  orientation: landscape;
+}
+
+/* line 59, F:/MMI2/S4/WebDoc/scss/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 63, F:/MMI2/S4/WebDoc/scss/style.scss */
+.popup {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 50;
+  border: black 15px solid;
+  border-radius: 20px;
+  font-family: "ArialBold";
+  display: flex;
+  top: 15%;
+  left: 13%;
+  width: 70%;
+  height: 70%;
+}
+
+/* line 77, F:/MMI2/S4/WebDoc/scss/style.scss */
+#texte {
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: justify;
+}
+
+/* line 84, F:/MMI2/S4/WebDoc/scss/style.scss */
+#texteCarte {
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: justify;
+  font-size: 2em;
+}
+
+/* line 92, F:/MMI2/S4/WebDoc/scss/style.scss */
+.popupTexte {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 50;
+  border: black 15px solid;
+  border-radius: 20px;
+  font-family: "ArialBold";
+  display: flex;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+}
+
+/* line 106, F:/MMI2/S4/WebDoc/scss/style.scss */
+#croix,
+#btnPause {
+  display: none;
+}
+
+/* line 111, F:/MMI2/S4/WebDoc/scss/style.scss */
+#btnPlay,
+#btnPause {
+  z-index: 20;
+  position: absolute;
+  right: 150px;
+  top: 15px;
+}
+
+/* line 119, F:/MMI2/S4/WebDoc/scss/style.scss */
+#croix,
+#pointInt {
+  z-index: 10;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+/* line 127, F:/MMI2/S4/WebDoc/scss/style.scss */
+#barreNav {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  height: 110px;
+  width: 1920px;
+  z-index: 5;
+  overflow: hidden;
+  background: url("../Images/PageAccueil/FlecheCoupe.svg");
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+/* line 140, F:/MMI2/S4/WebDoc/scss/style.scss */
+#barreNav a:not(:first-child) {
+  margin: auto;
+  margin-top: 60px;
+}
+
+/* line 146, F:/MMI2/S4/WebDoc/scss/style.scss */
+#PremierAnnee {
+  margin-left: 2%;
+  margin-top: 60px;
+  margin-bottom: auto;
+  margin-right: auto;
+}
+
+/* line 153, F:/MMI2/S4/WebDoc/scss/style.scss */
+.pageAnnee {
+  color: white;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Arial";
+}
+
+/* line 158, F:/MMI2/S4/WebDoc/scss/style.scss */
+.pageAnnee #texteCliquez {
+  margin-top: -3%;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  font-size: 8em;
+  animation: grandit 1s ease infinite;
+}
+
+/* line 168, F:/MMI2/S4/WebDoc/scss/style.scss */
+.anneeNav:hover {
+  transform: translateY(-45px);
+  filter: drop-shadow(0 0 0.75em orange);
+}
+
+/* line 173, F:/MMI2/S4/WebDoc/scss/style.scss */
+.ouverturePopup {
+  animation: ouverturePopup 0.5s ease forwards;
+}
+
+/* line 177, F:/MMI2/S4/WebDoc/scss/style.scss */
+.fermeturePopup {
+  animation: fermeturePopup 0.5s ease forwards;
+}
+
+@keyframes ouverturePopup {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fermeturePopup {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* line 199, F:/MMI2/S4/WebDoc/scss/style.scss */
+.hover {
+  transform: translateY(-20%) !important;
+  filter: drop-shadow(0 0 2em white);
+}
+
+/* line 204, F:/MMI2/S4/WebDoc/scss/style.scss */
+#video {
+  position: absolute;
+  height: 750px;
+  width: 1650px;
+  z-index: 30;
+  top: 155px;
+  left: 135px;
+}
+
+/* line 213, F:/MMI2/S4/WebDoc/scss/style.scss */
+.popupVideo {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 25;
+}
+
+/*******************Acccueil***********************/
+/* line 224, F:/MMI2/S4/WebDoc/scss/style.scss */
+#contentAccueil {
+  background: url("../Images/PageAccueil/FondAccueil.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 230, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil {
+  font-family: "LHF";
+  font-size: 2em;
+  color: white;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* line 241, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  display: flex;
+  flex-direction: column;
+  height: 1080px;
+  background-color: black;
+}
+
+/* line 250, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #titreAccueil {
+  background: url("../Images/PageAccueil/Hearthstone.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 257, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #titreAccueil h1 {
+  position: absolute;
+  left: 650px;
+  top: 80px;
+}
+
+/* line 263, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #containHaut {
+  background: url("../Images/PageAccueil/Fleche.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  justify-content: space-around;
+  padding-bottom: 4.5%;
+  height: 540px;
+}
+
+/* line 270, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #containHaut a {
+  position: absolute;
+  top: 415px;
+}
+
+/* line 274, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #containHaut #rond2014 {
+  left: 220px;
+}
+
+/* line 277, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #containHaut #rond2016 {
+  left: 890px;
+}
+
+/* line 280, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #containHaut #rond2018 {
+  right: 200px;
+}
+
+/* line 285, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #containBas {
+  margin-bottom: auto;
+  margin-top: -3%;
+  height: 470px;
+}
+
+/* line 289, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #containBas #img2015 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 293, F:/MMI2/S4/WebDoc/scss/style.scss */
+#pageAccueil #bodyAccueil #containBas #img2017 {
+  margin-right: auto;
+}
+
+/* line 300, F:/MMI2/S4/WebDoc/scss/style.scss */
+.contain {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 305, F:/MMI2/S4/WebDoc/scss/style.scss */
+.annee:hover {
+  filter: drop-shadow(0 0 0.75em orange);
+  animation: grandit 1s ease infinite;
+}
+
+/* line 310, F:/MMI2/S4/WebDoc/scss/style.scss */
+.img:hover {
+  animation: grandit 1s ease infinite;
+}
+
+@keyframes grandit {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*********************année******************/
+/* line 329, F:/MMI2/S4/WebDoc/scss/style.scss */
+.content2018 {
+  background: url("../Images/2018/Fond2018.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 335, F:/MMI2/S4/WebDoc/scss/style.scss */
+.content2017 {
+  background: url("../Images/2017/Fond2017.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 341, F:/MMI2/S4/WebDoc/scss/style.scss */
+.content2016 {
+  background: url("../Images/2016/Fond2016.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 347, F:/MMI2/S4/WebDoc/scss/style.scss */
+.content2014 {
+  background: url("../Images/2014/Fond2014.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 353, F:/MMI2/S4/WebDoc/scss/style.scss */
+.content2015 {
+  background: url("../Images/2015/Fond2015.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 359, F:/MMI2/S4/WebDoc/scss/style.scss */
+#page2014,
+#page2015,
+#page2016,
+#page2017,
+#page2018 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* line 371, F:/MMI2/S4/WebDoc/scss/style.scss */
+#page2014 #body2014,
+#page2015 #body2014,
+#page2016 #body2014,
+#page2017 #body2014,
+#page2018 #body2014 {
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  display: flex;
+  flex-direction: column;
+  height: 1080px;
+  overflow: hidden;
+  background-color: black;
+}
+
+/* line 380, F:/MMI2/S4/WebDoc/scss/style.scss */
+#page2014 #body2014 .popup,
+#page2015 #body2014 .popup,
+#page2016 #body2014 .popup,
+#page2017 #body2014 .popup,
+#page2018 #body2014 .popup {
+  font-size: 2em;
+}
+
+/* line 383, F:/MMI2/S4/WebDoc/scss/style.scss */
+#page2014 #body2014 #ensemble,
+#page2015 #body2014 #ensemble,
+#page2016 #body2014 #ensemble,
+#page2017 #body2014 #ensemble,
+#page2018 #body2014 #ensemble {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 1080px;
+  width: 1920px;
+}
+
+/* line 389, F:/MMI2/S4/WebDoc/scss/style.scss */
+#page2014 #body2014 #ensemble #carteHaut,
+#page2015 #body2014 #ensemble #carteHaut,
+#page2016 #body2014 #ensemble #carteHaut,
+#page2017 #body2014 #ensemble #carteHaut,
+#page2018 #body2014 #ensemble #carteHaut {
+  margin: 0 auto;
+  height: 500px;
+  width: 1920px;
+  top: 0;
+  z-index: 3;
+}
+
+/* line 396, F:/MMI2/S4/WebDoc/scss/style.scss */
+#page2014 #body2014 #ensemble #carteBas,
+#page2015 #body2014 #ensemble #carteBas,
+#page2016 #body2014 #ensemble #carteBas,
+#page2017 #body2014 #ensemble #carteBas,
+#page2018 #body2014 #ensemble #carteBas {
+  margin: 0 auto;
+  height: 45%;
+  bottom: 0;
+  z-index: 3;
+}
+
+/* line 402, F:/MMI2/S4/WebDoc/scss/style.scss */
+#page2014 #body2014 #ensemble .cartes,
+#page2015 #body2014 #ensemble .cartes,
+#page2016 #body2014 #ensemble .cartes,
+#page2017 #body2014 #ensemble .cartes,
+#page2018 #body2014 #ensemble .cartes {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 405, F:/MMI2/S4/WebDoc/scss/style.scss */
+#page2014 #body2014 #ensemble .cartes img,
+#page2015 #body2014 #ensemble .cartes img,
+#page2016 #body2014 #ensemble .cartes img,
+#page2017 #body2014 #ensemble .cartes img,
+#page2018 #body2014 #ensemble .cartes img {
+  position: absolute;
+}
+
+/* line 413, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee2018 {
+  background: url("../Images/2018/2018.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  width: 1920px;
+  display: flex;
+  flex-direction: row;
+  z-index: 4;
+  position: absolute;
+}
+
+/* line 423, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee2018 img {
+  margin-left: auto;
+}
+
+/* line 428, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee2017 {
+  background: url("../Images/2017/2017.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  width: 1920px;
+  display: flex;
+  flex-direction: row;
+  z-index: 4;
+  position: absolute;
+}
+
+/* line 438, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee2017 img {
+  margin-left: auto;
+}
+
+/* line 443, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee2016 {
+  background: url("../Images/2016/2016.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  width: 1920px;
+  display: flex;
+  flex-direction: row;
+  z-index: 4;
+  position: absolute;
+}
+
+/* line 453, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee2016 img {
+  margin-left: auto;
+}
+
+/* line 459, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee2015 {
+  background: url("../Images/2015/2015.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  width: 1920px;
+  display: flex;
+  flex-direction: row;
+  z-index: 4;
+  position: absolute;
+}
+
+/* line 469, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee2015 img {
+  margin-left: auto;
+}
+
+/* line 474, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee {
+  background: url("../Images/2014/2014.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  width: 1920px;
+  display: flex;
+  flex-direction: row;
+  z-index: 4;
+  position: absolute;
+}
+
+/* line 484, F:/MMI2/S4/WebDoc/scss/style.scss */
+#titreAnnee img {
+  margin-left: auto;
+}
+
+/* line 489, F:/MMI2/S4/WebDoc/scss/style.scss */
+#getg {
+  transform: rotate(-15deg);
+  bottom: -190px;
+  left: 720px;
+  z-index: 3;
+}
+
+/* line 496, F:/MMI2/S4/WebDoc/scss/style.scss */
+#nax {
+  transform: rotate(15deg);
+  bottom: -190px;
+  right: 750px;
+}
+
+/* line 502, F:/MMI2/S4/WebDoc/scss/style.scss */
+#montRoche,
+#dta,
+#ungoro, #bm {
+  transform: rotate(-25deg);
+  bottom: -220px;
+  left: 700px;
+}
+
+/* line 510, F:/MMI2/S4/WebDoc/scss/style.scss */
+#gdTournois,
+#kara,
+#tdg, #arma {
+  bottom: -190px;
+  left: 820px;
+}
+
+/* line 517, F:/MMI2/S4/WebDoc/scss/style.scss */
+#ligueExplo,
+#gad,
+#kc, #raz {
+  transform: rotate(25deg);
+  bottom: -220px;
+  left: 950px;
+}
+
+/* line 525, F:/MMI2/S4/WebDoc/scss/style.scss */
+#dosCarte1 {
+  transform: rotate(-15deg);
+  top: -200px;
+  left: 900px;
+  z-index: 1;
+}
+
+/* line 532, F:/MMI2/S4/WebDoc/scss/style.scss */
+#dosCarte2 {
+  transform: rotate(15deg);
+  top: -200px;
+  left: 750px;
+  z-index: 1;
+}
+
+/* line 539, F:/MMI2/S4/WebDoc/scss/style.scss */
+#dosCarte13 {
+  transform: rotate(25deg);
+  top: -220px;
+  left: 700px;
+}
+
+/* line 545, F:/MMI2/S4/WebDoc/scss/style.scss */
+#dosCarte23 {
+  top: -200px;
+  left: 820px;
+}
+
+/* line 550, F:/MMI2/S4/WebDoc/scss/style.scss */
+#dosCarte33 {
+  top: -220px;
+  left: 950px;
+  transform: rotate(-25deg);
+}
+
+/*# sourceMappingURL=../css/style.map */
