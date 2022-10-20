@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html id="page2016" class="pageAnnee">
+
+<head>
+    <title>Webdocumentaire sur Hearthstone</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="descrpition" content="Dans ce webdocumentaire vous découvrirez l'unvers de Hearthstone et les bases du jeu. Vous apprendrez ainsi comment Blizzard réussi à garder autant d'utilisateurs et ce 5ans après la sortie du jeu." />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <script src="../js/fixedviewport.js"></script>
+    <script>
+        "use strict";
+        FixedViewport.polyfill(1920, 1080);
+        document.addEventListener("DOMContentLoaded", () => {
+            const native = document.getElementById("native");
+            native.textContent = FixedViewport.hasNativeSupport() ? "native" : "polyfill";
+        });
+    </script>
+</head>
+
+<body id="body2014">
+    <div class="content content2016">
+         <audio loop src="../Images/Musique/MusiqueAubergeHS.mp3" id="musique"></audio>
+        <div id="titreAnnee2016">
+            <img class="img" src="../Images/PageAccueil/BtnPause.png" id="btnPause">
+        <img class="img" src="../Images/PageAccueil/BtnPlay.png" id="btnPlay">
+            <img class="img" src="../Images/PageAccueil/PointInterogation.png" id="pointInt">
+            <img class="img" src='../Images/PageAccueil/Croix.png' id='croix'>
+        </div>
+        <div id="popup"></div>
+        <div id="survolTexte"></div>
+        <div id="survolCarteDos"></div>
+        <div id="cliqueVideo"></div>
+
+        <div id="ensemble">
+            <div id="carteHaut" class="cartes">
+                <img id="dosCarte13" src="../Images/2014/DosCarte.png" class="cartesDos card" >
+                <img id="dosCarte23" src="../Images/2014/DosCarte.png" class="cartesDos card">
+                <img id="dosCarte33" src="../Images/2014/DosCarte.png" class="cartesDos card">
+            </div>
+            <div id="texteCliquez">
+                Cliquez sur une carte
+            </div>
+            <div id="carteBas" class="cartes">
+                <img id="dta" src="../Images/2016/Dta.png" class="carte card">
+                <img id="kara" src="../Images/2016/Karazhan.png" class="carte card" >
+                <img id="gad" src="../Images/2016/Gadgetzan.png" class="carte card" >
+            </div>
+            <div id="barreNav">
+                 <a href="../html/2014.html" id="PremierAnnee"> <img class="anneeNav" src="../Images/PageAccueil/Accueil2014.png"></a>
+                 <a href="../html/2015.html"><img class="anneeNav" src="../Images/PageAccueil/2015BonSens.png"></a>
+                <a href="../html/index.html"><img class="anneeNav" src="../Images/PageAccueil/BulleAccueil.png"></a>          
+                <a href="../html/2017.html"> <img class="anneeNav" src="../Images/PageAccueil/2017BonSens.png"></a>
+                <a href="../html/2018.html"> <img class="anneeNav" src="../Images/PageAccueil/Accueil2018.png"></a>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

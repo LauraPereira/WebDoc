@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html id="pageAccueil">
+
+<head>
+    <title>Webdocumentaire sur Hearthstone</title>
+    <meta charset="UTF-8" />
+
+    <meta name="descrpition" content="Dans ce webdocumentaire vous découvrirez l'unvers de Hearthstone et les bases du jeu. Vous apprendrez ainsi comment Blizzard réussi à garder autant d'utilisateurs et ce 5ans après la sortie du jeu." />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <script src="../js/fixedviewport.js"></script>
+     <script>
+        "use strict";
+        FixedViewport.polyfill(1920, 1080);
+        document.addEventListener("DOMContentLoaded", () => {
+            const native = document.getElementById("native");
+            native.textContent = FixedViewport.hasNativeSupport() ? "native" : "polyfill";
+        });
+    </script>
+</head>
+
+<body id="bodyAccueil" class="content">
+    <audio loop src="../Images/Musique/MusiqueAubergeHS.mp3" id="musique"></audio>
+    <div id="contentAccueil">
+    <div id="titreAccueil">
+        <h1>Heroes of Warcraft</h1>
+        <img class="img" src="../Images/PageAccueil/BtnPause.png" id="btnPause">
+        <img class="img" src="../Images/PageAccueil/BtnPlay.png" id="btnPlay">
+        <img class="img" src="../Images/PageAccueil/PointInterogation.png" id="pointInt">
+        <img class="img" src='../Images/PageAccueil/Croix.png' id='croix'>
+    </div>
+    <div id="popup"></div>
+   
+    <div class="contain" id="containHaut">
+
+        <a href="../html/2014.html" id="rond2014"><img src="../Images/PageAccueil/Accueil2014.png"  class="annee"></a>
+
+       <a href="../html/2016.html" id="rond2016"><img src="../Images/PageAccueil/Accueil2016.png" id="img2016" class="annee"></a> 
+
+       <a href="../html/2018.html" id="rond2018"><img src="../Images/PageAccueil/Accueil2018.png" id="img2018" class="annee"></a> 
+
+    </div>
+    <div class="contain" id="containBas">
+
+        <a href="../html/2015.html" id="img2015"><img src="../Images/PageAccueil/Accueil2015.png"  class="annee"></a>
+
+        <a href="../html/2017.html" id="img2017" ><img src="../Images/PageAccueil/Accueil2017.png" class="annee"></a>
+
+    </div>
+        </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
